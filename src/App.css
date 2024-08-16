@@ -1,0 +1,121 @@
+/* src/styles.css */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global styles for links */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* Global styles for body */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+/* Styles for headings */
+h1 {
+  font-size: 2.5em; /* Adjusted for a more balanced look */
+  line-height: 1.2;
+  color: var(--heading-color);
+  margin-bottom: 1em;
+  text-align: center; /* Center align the heading text */
+}
+
+/* Styles for buttons */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.8em 1.6em; /* Increased padding for a better look */
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+  background-color: #333333;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Media queries for light theme */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+    --background-color: #ffffff;
+    --heading-color: #213547;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+    color: #333333;
+  }
+  button:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+/* Additional styles for better layout */
+.container {
+  max-width: 600px; /* Reduced width for a more compact look */
+  width: 100%;
+  padding: 2em; /* Increased padding for better spacing */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #333333; /* Slightly different background for contrast */
+  border-radius: 8px; /* Rounded corners for modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+input[type="text"] {
+  padding: 0.8em; /* Increased padding for a better touch target */
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 1em; /* Spacing between input and button */
+  width: calc(100% - 1.2em); /* Ensure input takes full width minus padding */
+  transition: border-color 0.25s;
+}
+input[type="text"]:focus {
+  border-color: #646cff;
+  outline: none;
+}
+
+p {
+  margin: 0.5em 0;
+  color: var(--text-color);
+}
